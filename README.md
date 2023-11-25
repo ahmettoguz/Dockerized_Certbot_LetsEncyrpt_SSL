@@ -35,8 +35,5 @@
 
     certbot certonly
 
+    docker stop letssl
 
-certbot certonly
-###########################
-    service apache2 reload
-    sudo certbot --apache
