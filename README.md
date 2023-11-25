@@ -28,8 +28,15 @@
     $ docker rmi $(docker images -f "dangling=true" -q)
 
 # RUN CONTAINER
-    docker run --rm -d -p 80:80 -p 443:443  --name c-ssl i-ssl
-    
+
+    docker run --rm -d -v ./letsencrypt:/etc/letsencrypt/ -p 80:80 --name letssl
+
+    docker exec -it letssl /bin/bash
+
+    certbot certonly
+
+
+certbot certonly
 ###########################
     service apache2 reload
     sudo certbot --apache
