@@ -6,7 +6,6 @@
     docker images -a
 
 # BUILD IMAGE
-    docker build -t i-ssl .
 
     
 # GET INTO CONTAINER
@@ -29,7 +28,9 @@
 
 # RUN CONTAINER
 
-    docker run --rm -d -v ./letsencrypt:/etc/letsencrypt/ -p 80:80 --name letssl
+    docker build -t i-letssl .
+
+    docker run --rm -d -v ./letsencrypt:/etc/letsencrypt/ -p 80:80 --name c-letssl i-letssl 
 
     docker exec -it letssl /bin/bash
 
