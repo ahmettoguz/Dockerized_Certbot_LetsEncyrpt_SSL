@@ -1,4 +1,3 @@
-
 docker build -t i-letssl .
 
 docker run -it --rm -d -v ./letsencrypt:/etc/letsencrypt/ -p 80:80 --name c-letssl i-letssl 
@@ -9,7 +8,6 @@ certbot certonly
 
 exit
 
-docker stop letssl
+docker stop c-letssl
 
 docker rmi i-letssl
-
