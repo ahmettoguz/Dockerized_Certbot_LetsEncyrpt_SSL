@@ -73,7 +73,7 @@ docker rmi i-letssl
 
 ## Features
 
-* 3 Month free letsencrypt ssl can be obtainable.
+* 3 Month free letsencrypt ssl can is obtainable.
 * Certificate is generated in letsencrypt folder.
 
 <br/>
