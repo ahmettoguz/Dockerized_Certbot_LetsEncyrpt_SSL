@@ -1,9 +1,8 @@
-FROM ubuntu:latest
+# Use Alpine as the base image
+FROM alpine:latest
 
-RUN apt-get update -y && apt-get install -y \
-    python3 \
-    python3-pip
+# Install Certbot
+RUN apk add --no-cache certbot
 
-RUN pip install certbot
-
+# Expose port 80
 EXPOSE 80

@@ -42,7 +42,7 @@ docker run -it --rm -d -v ./letsencrypt:/etc/letsencrypt/ -p 80:80 --name c-lets
 ```
 
 ```
-docker exec -it c-letssl /bin/bash
+docker exec -it c-letssl /bin/sh
 ```
 
 ```
